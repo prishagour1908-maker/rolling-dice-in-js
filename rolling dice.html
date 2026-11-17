@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: beige;
+            font-family: cursive;
+            
+            text-align: center;
+        }
+        .dice{
+            color:solid purple;
+            font-size: 140px;
+            background-color: rgb(225, 193, 255);
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+            text-align: center;
+            border-radius: 10px;
+        }
+        button{
+            font-size:40px;
+            background-color: rgb(252, 243, 152);
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <br><br><br><br><br>
+    <div id="dice" class="dice"></div>
+    <br>
+    <button onclick="dicerandom()">Click to Roll Dice</button>
+    </center>
+
+
+    <script>
+    function dicerandom(){
+    let num = ["1","2","3","4","5","6"];
+
+    let n1 = num[0];
+    let n2 = num[1];
+    let n3 = num[2];
+    let n4 = num[3];
+    let n5 = num[4];
+    let n6 = num[5];
+
+
+    document.getElementById('dice').innerHTML = Math.floor(Math.random(n1,n2,n3,n4,n5,n6)*6);
+    }
+
+    </script>
+</body>
+</html>
